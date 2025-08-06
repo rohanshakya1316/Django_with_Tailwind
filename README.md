@@ -15,7 +15,7 @@ This project uses [django-tailwind](https://github.com/timonweb/django-tailwind)
 
 ### 1. Install the required packages
 
-```bash
+```python
 pip install django-tailwind
 ```
 
@@ -35,14 +35,13 @@ INSTALLED_APPS = [
 ## 🧾 Configuration
 ### 3. Define your Tailwind app name
 In settings.py, add:
-```
-python
+``` python
 TAILWIND_APP_NAME = 'theme'
 INTERNAL_IPS = ['127.0.0.1']  # Needed for hot reloading
 ```
 
 ## 📦 Create the Tailwind app
-```bash
+``` python
 python manage.py tailwind init theme
 ```
 This creates a new Django app named theme.
@@ -66,7 +65,7 @@ This starts Tailwind CLI in watch mode for hot reload on changes.
 ### 5. Run Django server
 In another terminal:
 
-```bash
+```python
 python manage.py runserver
 ```
 
