@@ -17,52 +17,63 @@ This project uses [django-tailwind](https://github.com/timonweb/django-tailwind)
 
 ```bash
 pip install django-tailwind
+```
 
-2. Add 'tailwind' and your custom theme app to INSTALLED_APPS
+### 2. Add 'tailwind' and your custom theme app to INSTALLED_APPS
+
 Edit your settings.py:
 
-python
+```python
 INSTALLED_APPS = [
     ...
     'tailwind',
     'theme',  # your Tailwind theme app
     ...
 ]
-🧾 Configuration
-3. Define your Tailwind app name
-In settings.py, add:
+```
 
+##🧾 Configuration
+### 3. Define your Tailwind app name
+In settings.py, add:
+```
 python
 TAILWIND_APP_NAME = 'theme'
 INTERNAL_IPS = ['127.0.0.1']  # Needed for hot reloading
-📦 Create the Tailwind app
-bash
+```
+
+## 📦 Create the Tailwind app
+```bash
 python manage.py tailwind init theme
+```
 This creates a new Django app named theme.
 
-⚙️ Install Node modules
+## ⚙️ Install Node modules
 Navigate to the newly created Tailwind app and install dependencies:
 
-bash
+```bash
 cd theme
 npm install
 You can modify Tailwind configuration in theme/tailwind.config.js.
+```
 
-👷 Development
-4. Run Tailwind in development mode
-bash
+##👷 Development
+### 4. Run Tailwind in development mode
+```bash
 npm run dev
+```
 This starts Tailwind CLI in watch mode for hot reload on changes.
 
-5. Run Django server
+### 5. Run Django server
 In another terminal:
 
-bash
+```bash
 python manage.py runserver
-✅ Usage in Templates
+```
+
+##✅ Usage in Templates
 In your base.html or any template file:
 
-html
+``` html
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -73,18 +84,21 @@ html
     <h1 class="text-4xl font-bold text-center">Hello, Tailwind!</h1>
 </body>
 </html>
+```
+
 Make sure theme/static/css/dist/styles.css is generated and collected correctly.
 
-📦 Production Build
+## 📦 Production Build
 To build CSS for production:
 
-bash
+```bash
 npm run build
 Then collect static files:
-
 ```
 python manage.py collectstatic
-📁 File Structure
+
+## 📁 File Structure
+```
 project/
 │
 ├── theme/                    # Tailwind app
@@ -97,7 +111,7 @@ project/
 ├── your_django_app/
 ├── manage.py
 └── ...
-```
+``` 
 
 ## 🧹 Optional Tips
 You can customize the theme via tailwind.config.js
@@ -106,8 +120,7 @@ Use @apply directive in input.css for reusable styles
 
 Use npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch if manually working with Tailwind CLI
 
-### 📚 Resources
+## 📚 Resources
 Django-Tailwind Docs
 
 Tailwind CSS Docs
-
