@@ -32,7 +32,7 @@ INSTALLED_APPS = [
 ]
 ```
 
-##🧾 Configuration
+## 🧾 Configuration
 ### 3. Define your Tailwind app name
 In settings.py, add:
 ```
@@ -56,7 +56,7 @@ npm install
 You can modify Tailwind configuration in theme/tailwind.config.js.
 ```
 
-##👷 Development
+## 👷 Development
 ### 4. Run Tailwind in development mode
 ```bash
 npm run dev
@@ -70,7 +70,7 @@ In another terminal:
 python manage.py runserver
 ```
 
-##✅ Usage in Templates
+## ✅ Usage in Templates
 In your base.html or any template file:
 
 ``` html
@@ -114,13 +114,12 @@ project/
 ``` 
 
 ## 🧹 Optional Tips
-You can customize the theme via tailwind.config.js
+> You can customize the theme via `tailwind.config.js`
 
-Use @apply directive in input.css for reusable styles
+Use `@apply` directive in `input.css` for reusable styles
 
-Use npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch if manually working with Tailwind CLI
+Use `npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch` if manually working with Tailwind CLI
 
 ## 📚 Resources
-Django-Tailwind Docs
-
-Tailwind CSS Docs
+- [Django-Tailwind Docs](https://django-tailwind.readthedocs.io/)
+- [Tailwind CSS Docs](https://tailwindcss.com/docs/installation)
